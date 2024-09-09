@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Chart Practice</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 1000px">
+  <canvas id="myChart"></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      datasets: [{
+        data:[86, 71, 13, 45, 32, 12, 21, 33, 12, 0, 9, 12],
+        label:'Candy',
+        borderColor: 'rgba(247, 36, 25, 1)'
+      }, {
+          data:[81, 14, 17, 0, 71, 18, 71, 82, 73, 73, 61, 47],
+          label: 'Clothes',
+          borderColor: 'rgba(250, 155, 22, 1)'
+      }, {
+          data: [0, 25, 35, 12, 43, 23, 12, 11, 23, 21, 43, 23],
+          label: 'Amazon',
+          borderColor: 'rgba(245, 237, 24, 1)'
+        },{
+        data: [13, 27, 4, 21, 23, 34, 12, 43, 54, 32, 12, 43],
+        label: 'Computers',
+        borderColor: 'rgba(29, 245, 22, 1)'
+      }, {
+        data: [43, 31, 32, 54, 32, 12, 21, 32, 27, 29, 19, 38],
+        label: 'Food',
+        borderColor: 'rgba(25, 214, 247, 1)'
+      }, {
+        data: [19, 38, 17, 13, 43, 27, 17, 48, 27, 17, 12, 19],
+        label: 'Paint',
+        borderColor: 'rgba(25, 95, 247, 1)'
+      }, {
+        data: [71, 51, 43, 51, 14, 65, 24, 14, 12, 81, 72, 54],
+        label: 'Pencils',
+        borderColor: 'rgba(121, 25, 255, 1)'
+      }, {
+        data: [19, 46, 17, 48, 73, 54, 46, 62, 14, 51, 42, 53],
+        label: 'Desks',
+        borderColor: 'rgba(255, 112, 69, 1)'
+      }, {
+        data: [64, 53, 25, 1, 63, 56, 23, 56, 43, 82, 24, 52],
+        label: 'Chairs',
+        borderColor: 'rgba(242, 210, 82, 1)'
+      }, {
+        data: [82, 16, 77, 23, 11, 57, 66, 12, 54, 23, 12, 11],
+        label: 'Wires',
+        borderColor: 'rgba(184, 255, 61, 1)'
+      }, {
+        data: [72, 43, 11, 43, 15, 52, 65, 43, 15, 18, 51, 43],
+        label: 'Monitors',
+        borderColor: 'rgba(65, 232, 146, 1)'
+      }, {
+        data: [19, 18, 46, 17, 85, 51, 51, 35, 25, 31, 32, 73],
+        label: 'Erasers',
+        borderColor: 'rgba(82, 82, 242, 1)'
+      }, {
+        data: [1, 22, 10, 13, 20, 43, 31, 24, 14, 53, 18, 19],
+        label: 'Movies',
+        borderColor: 'rgba(99, 99, 99, 1)'
+      }]
+    },
+    options:{
+      plugins:{
+        title: {
+          display: true,
+          text: 'Monthly Spending'
+        },
+        legend: {
+          position: 'left'
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>

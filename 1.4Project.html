@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.4 Project</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 700px">
+  <canvas id='myChart'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets:[{
+        label: 'Cybersecurity Jobs',
+        backgroundColor: 'rgba(245, 110, 110, 1)',
+        pointBackgroundColor: 'rgba(245, 110, 110, 1)',
+        pointRadius: 4,
+        data: [
+          {x: 2014, y: 2},
+          {x: 2015, y: 3},
+          {x: 2016, y: 5},
+          {x: 2017, y: 7},
+          {x: 2018, y: 11},
+          {x: 2019, y: 17},
+          {x: 2020, y: 20},
+          {x: 2021, y: 21},
+          {x: 2022, y: 35},
+          {x: 2023, y: 70}
+        ]
+    }, {
+        label: 'Web Development Jobs',
+        backgroundColor: 'rgba(156, 129, 104, 1)',
+        pointBackgroundColor: 'rgba(156, 129, 104, 1)',
+        pointRadius: 4,
+        data: [
+          {x: 2014, y: 71},
+          {x: 2015, y: 78},
+          {x: 2016, y: 78},
+          {x: 2017, y: 88},
+          {x: 2018, y: 87},
+          {x: 2019, y: 80},
+          {x: 2020, y: 84},
+          {x: 2021, y: 77},
+          {x: 2022, y: 89},
+          {x: 2023, y: 88}
+        ],}, {
+          label: 'Computer Science Jobs',
+          backgroundColor: 'rgba(150, 214, 201, 1)',
+          pointBackgroundColor: 'rgba(150, 214, 201, 1)',
+          pointRadius: 4,
+          data: [
+              {x: 2014, y: 70},
+              {x: 2015, y: 68},
+              {x: 2016, y: 64},
+              {x: 2017, y: 75},
+              {x: 2018, y: 75},
+              {x: 2019, y: 77},
+              {x: 2020, y: 83},
+              {x: 2021, y: 61},
+              {x: 2022, y: 77},
+              {x: 2023, y: 93}
+          ],}, ],},
+      options:{
+          plugins:{
+              title: {
+                  display: true,
+                  text: 'Search term used over 10 years'
+              },
+              legend: {
+                  position: 'left'
+              }
+          }
+      }})
+</script>
+
+<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+<div style="width: 700px">
+    <canvas id="myChart2"></canvas>
+</div>
+<script>
+    var cty = document.getElementById('myChart2');
+    var myChart2 = new Chart(cty, {
+        type: 'line',
+        data: {
+            labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+            datasets: [{
+                data:[2, 3, 5, 7, 11, 17, 20, 21, 35, 70],
+                label:'Cybersecurity Jobs',
+                borderColor: 'rgba(245, 110, 110, 1)'
+            }, {
+                data:[71, 78, 78, 88, 87, 80, 84, 77, 89, 88],
+                label: 'Web Development Jobs',
+                borderColor: 'rgba(156, 129, 104, 1)'
+            }, {
+                data: [70, 68, 64, 75, 75, 77, 83, 61, 77, 93],
+                label: 'Computer Science Jobs',
+                borderColor: 'rgba(150, 214, 201, 1)'
+            }]
+        },
+        options:{
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'Search term used over 10 years'
+                },
+                legend: {
+                    position: 'left'
+                }
+            }
+        }
+    });
+</script>
+
+<p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+
+<div style="width: 700px">
+    <canvas id="myChart3"></canvas>
+</div>
+<script>
+    var ctz = document.getElementById('myChart3')
+    var myChart3 = new Chart(ctz, {
+        type: 'polarArea',
+        data: {
+            labels: [
+                'Cybersecurity Jobs', 'Web Development Jobs', 'Computer Science Jobs'
+            ],
+            datasets:[{
+                label: 'Polar Area Chart',
+                data: [19.1, 82, 74.3],
+                backgroundColor: [
+                    'rgb(245, 110, 110)',
+                    'rgb(156, 129, 104)',
+                    'rgb(150, 214, 201)'
+                ]
+            }]
+        },
+        options:{
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'Search term used over 10 years'
+                },
+                legend: {
+                    position: 'left'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

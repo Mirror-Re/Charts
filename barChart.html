@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 500px">
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Green', 'Periwinkle', 'Blue', 'Pink'],
+            datasets: [{
+                label: '# of votes',
+                data: [2, 15, 5, 8],
+                backgroundColor: [
+                    'rgba(144, 224, 181, 0.2)',
+                    'rgba(191, 199, 255, 0.2)',
+                    'rgba(194, 238, 255, 0.2)',
+                    'rgba(252, 187, 184,0.2)'
+                ],
+                borderColor: [
+                    'rgba(144, 224, 181, 1)',
+                    'rgba(191, 199, 255, 1)',
+                    'rgba(194, 238, 255, 1)',
+                    'rgba(252, 187, 184, 1)'
+                ],
+                borderWidth: 5
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            indexAxis: 'y'
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PieCharts</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 500px">
+  <canvas id='myChart'></canvas>
+</div>
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Red', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink'],
+      datasets:[{
+        label: 'My First Doughnut Today',
+        data:[300, 50, 200, 150, 50, 10],
+        backgroundColor:[
+          'rgb(204, 71, 71)',
+          'rgb(255, 200, 80)',
+          'rgb(53, 181, 51)',
+          'rgb(50, 150, 240)',
+          'rgb(166, 53, 222)',
+          'rgb(255, 99, 150)'
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+<div style="width: 500px">
+  <canvas id='myChart2'></canvas>
+</div>
+<script>
+  var cty = document.getElementById('myChart2');
+  var myChart = new Chart(cty, {
+    type: 'pie',
+    data: {
+      labels: ['Red', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink'],
+      datasets:[{
+        label: 'My First Doughnut Today',
+        data:[300, 50, 200, 150, 50, 10],
+        backgroundColor:[
+          'rgb(204, 71, 71)',
+          'rgb(255, 200, 80)',
+          'rgb(53, 181, 51)',
+          'rgb(50, 150, 240)',
+          'rgb(166, 53, 222)',
+          'rgb(255, 99, 150)'
+        ],
+        hoverOffset: 1
+      }]
+    }
+  });
+</script>
+
+<div style="width: 500px">
+  <canvas id="myChart3"></canvas>
+</div>
+<script>
+  var ctz = document.getElementById('myChart3')
+  var myChart = new Chart(ctz, {
+    type: 'polarArea',
+    data: {
+      labels: [
+        'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink', 'Grey'
+      ],
+      datasets:[{
+        label: 'Polar Area Chart',
+        data: [11, 10, 15, 18, 11, 15, 20, 13],
+        backgroundColor: [
+          'rgb(250, 65, 65)',
+          'rgb(250, 139, 65)',
+          'rgb(255, 200, 85)',
+          'rgb(84, 214, 77)',
+          'rgb(50, 160, 240)',
+          'rgb(166, 53, 222)',
+          'rgb(255, 100, 130)',
+          'rgb(201, 203, 203)'
+        ]
+      }]
+    },
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Chart Practice</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 700px">
+    <canvas id="chart2"></canvas>
+</div>
+<script>
+    var cty = document.getElementById('chart2');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data: {
+            datasets:[{
+                label: 'Dataset1',
+                backgroundColor: 'rgba(225, 200, 50, 1)',
+                pointBackgroundColor: 'rgba(225, 200, 50, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 7, y: 10},
+                    {x: 11, y: 25},
+                    {x: 15, y: 15},
+                    {x: 17, y: 11},
+                    {x: 20, y: 10},
+                    {x: 19, y: 12},
+                    {x: 22, y: 21},
+                    {x: 14, y: 18}
+                ]
+            }, {
+                label: 'Dataset2',
+                backgroundColor: 'rgba(50, 200, 50, 1)',
+                pointBackgroundColor: 'rgba(50, 200, 50, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 1, y: 10},
+                    {x: 7, y: 13},
+                    {x: 15, y: 16},
+                    {x: 12, y: 10},
+                    {x: 14, y: 11},
+                    {x: 4, y: 14},
+                    {x: 18, y: 16},
+                    {x: 13, y: 15}
+                ]
+            }, {
+                label: 'Dataset3',
+                backgroundColor: 'rgba(25, 113, 255, 1)',
+                pointBackgroundColor: 'rgba(25, 113, 255, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 3, y: 15},
+                    {x: 5, y: 19},
+                    {x: 12, y: 4},
+                    {x: 2, y: 12},
+                    {x: 16, y: 10},
+                    {x: 7, y: 9},
+                    {x: 10, y: 8},
+                    {x: 15, y: 14},
+                    {x: 12, y: 15},
+                    {x: 15, y: 12}
+                ]
+            }, {
+                label: 'Dataset4',
+                backgroundColor: 'rgba(232, 21, 21, 1)',
+                pointBackgroundColor: 'rgba(232, 21, 21, 1)',
+                pointRadius: 4,
+                data: [
+                    {x: 5, y: 16},
+                    {x: 1, y: 12},
+                    {x: 9, y: 10},
+                    {x: 12, y: 13},
+                    {x: 10, y: 10},
+                    {x: 15, y: 13},
+                    {x: 13, y: 15},
+                    {x: 15, y: 18},
+                    {x: 11, y: 12},
+                    {x: 20, y: 19}
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                xAxis: {
+                    beginAtZero: true
+                },
+                yAxis: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display:true,
+                    text: 'Sales'
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
